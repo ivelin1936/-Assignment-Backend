@@ -26,21 +26,21 @@ How it's work:
 MarketStore class have main() method, with which we can run the console application. 
 For every shopping tour, need to create a cart instance, in which we can collect all our wished stuffs for buying. 
 Every stuff is an instance of the item's class. Item's class is just a date class, which keep the information about the items like a price and name.
-To finish the purchase we need to have and discount card, for the demo, discount card accept from it's constructor a turnover value for the previous month.
+To finish the purchase we need to have and discount card, for the demo, discount card accept from constructor a turnover value for the previous month.
 In the end with pay desk we can finalize our purchase and get in back an invoice of the purchase when invoke pay() method. 
 PayDesk has a private constructor (we can't instance it), because it work with a static method pay(), can be called without creating an object of class because it's associated to the class in which is reside not to the objects of that class.
 
 ### Demo
 #### Shopping items with Gold Discount Card with Mock data: turnover $1500, purchase value $1300;
-* Getting our card and start the shopping, so need to create an instace of card with turnover = 1300$
+* Getting card and start the shopping. Need to create an instace of card with turnover = 1300$
 ```
 DiscountCard goldenCard = new GoldCard(1300);
 ```
-   Input turnover will be validate, and if is incorrect will throw and exeption
+   Input turnover will be validate, and if is incorrect will throw InvalidTurnoverException
    ```
    private void setTurnover(double turnover) {
        if (turnover < 0) {
-           throw new IllegalArgumentException(INCORRECT_TURNOVER_VALUE_EX_MSG);
+           throw new InvalidTurnoverException(INCORRECT_TURNOVER_VALUE_EX_MSG);
        }
        this.turnover = turnover;
    }
@@ -49,14 +49,14 @@ DiscountCard goldenCard = new GoldCard(1300);
 ```
 Cart shopCart = new StoreCart();
 ```
-* Let's choice what a stuffs to buying. For the demo createing instances with sample data, will buy three stuffs for 350$, 700$ and 250$
+* Will buy three items for 350$, 700$ and 250$
 ```
 Item video = new ItemImpl("Video", 350D);
 Item fridge = new ItemImpl("Fridge", 700D);
 Item picture = new ItemImpl("Picture", 250D);
 ```
 Items validate the passed name and price, before to assigne them to his properties.
-* We need to adding every choosen stuff to our shopping cart
+* Need to adding every choosen stuff to shopping cart
 ```
 shopCart.addItem(video);
 shopCart.addItem(fridge);
@@ -66,7 +66,7 @@ shopCart.addItem(picture);
 ```
 String invoiceResult = PayDesk.pay(shopCart, goldenCard);
 ```
-Getting card discount rate from our card. The card will calculate it on base on the turnover from the previous month.
+The card will calculate discount rate on base on the turnover from the previous month.
 ```
 INITIAL_DISCOUNT = 2D; ONE_HUNDRED_DOLLARS = 100D; DISCOUNT_RATE_INCREMENT = 1D; MAX_DISCOUNT = 10D;
 
@@ -78,7 +78,7 @@ public double getDiscountRate() {
   return discount > MAX_DISCOUNT ? MAX_DISCOUNT : discount;
 }
 ```
-Getting purchase total value from our cart. The cart will calculate it and will return the totalAmount
+The cart will calculate purchase total value and will return the totalAmount
 ```
 @Override
 public double getPurchaseValue() {
@@ -97,7 +97,8 @@ private static double calculateTotalAmount(double purchaseValue, double discount
     return purchaseValue - discount;
 }
 ```
-Now the paydesk can build our invoice and to return it. So let's print on the console our invoice and to see result.
+Paydesk will build invoice and will return it. 
+Print invoice on the console and see result.
 ```
 writer.writeLine(invoiceResult);
 ```

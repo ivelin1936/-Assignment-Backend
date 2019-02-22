@@ -179,6 +179,12 @@ The ConsoleOutputWriter is initialized with:
 #### [OutputWriter](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/interfaces/OutputWriter.java)
     + void writeLine(String output)
     + void writeLine(String format, Object... params)
+    
+### Exceptions
+#### [InvalidTurnoverException](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/exceptions/InvalidTurnoverException.java)
+#### [InvalidPriceException](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/exceptions/InvalidPriceException.java)
+#### [InvalidNameException](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/exceptions/InvalidNameException.java)
+#### [InvalidItemsCollectionException](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/exceptions/InvalidItemsCollectionException.java)
 
 ## Unit Tests
 

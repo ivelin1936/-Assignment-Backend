@@ -164,16 +164,16 @@ The ConsoleOutputWriter is initialized with:
    * `+ writeLine(String format, Object... params)`
    
 ### Interfaces
-#### [DiscountCard](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/interfaces/DiscountCard.java)
+#### [DiscountCard](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/interfaces/DiscountCard.java)
     + double getPreviousMonthTurnover()
     + double getDiscountRate()
-#### [Item](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/interfaces/Item.java)
+#### [Item](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/interfaces/Item.java)
     + String getName()
     + double getPrice()
-#### [Cart](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/interfaces/Cart.java)
+#### [Cart](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/interfaces/Cart.java)
     + double getPurchaseValue()
     + void addItem(Item item)
-#### [OutputWriter](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/interfaces/OutputWriter.java)
+#### [OutputWriter](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/interfaces/OutputWriter.java)
     + void writeLine(String output)
     + void writeLine(String format, Object... params)
 

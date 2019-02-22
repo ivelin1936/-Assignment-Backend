@@ -6,16 +6,15 @@ This project is a small object-oriented model of market store system - console a
 ### Application is supposed to be run using an IDE
 
 * Clone repository: using client for the Git version control system. [TortoiseGit](https://tortoisegit.org/)
-* Open an integrated development environment (IDE) software 
-    * Import project
-    * Give full path to the project directory
-    * Import project from external model 
-      - Maven
-    * Use [JDK 10](https://docs.oracle.com/javase/10/install/overview-jdk-10-and-jre-10-installation.htm#JSJIG-GUID-8677A77F-231A-40F7-98B9-1FD0B48C346A)
+* Import project
+* Give full path to the project directory
+* Import project from external model 
+   - Maven
+* Use [JDK 11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
 
 #### Repository URL
 ```
-https://github.com/ivelin1936/Intership-Solutions.git
+https://github.com/ivelin1936/Assignment-Backend.git
 ```
 
 Check below, for the technologies and frameworks used versions.
@@ -192,7 +191,7 @@ Used Java Reflection, JUnit and Mokito. Check below, for the frameworks used ver
 
 ## Technologies
 
-* Java - [JDK10](https://www.oracle.com/technetwork/java/javase/10-relnote-issues-4108729.html)
+* Java - [JDK11](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
 
 ## Built With
 

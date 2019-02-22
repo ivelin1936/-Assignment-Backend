@@ -32,7 +32,7 @@ PayDesk has a private constructor (we can't instance it), because it work with a
 
 ### Demo
 #### Shopping items with Gold Discount Card with Mock data: turnover $1500, purchase value $1300;
-* Getting card and start the shopping. Need to create an instace of card with turnover = 1300$
+* Create an instace of golden card with turnover = 1300$
 ```
 DiscountCard goldenCard = new GoldCard(1300);
 ```

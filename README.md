@@ -222,7 +222,9 @@ Used Java Reflection, JUnit and Mokito. Check below, for the frameworks used ver
 
 ## Author
 
-**Ivelin DImitrov** - [ivelin1936](https://github.com/ivelin1936)
+**Ivelin DImitrov** 
+* [GitHub](https://github.com/ivelin1936)
+* [LinkedIn](https://www.linkedin.com/in/ivelin-dimitrov-42b13a151/)
 
 ## License
 

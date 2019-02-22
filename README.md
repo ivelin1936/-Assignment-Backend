@@ -117,6 +117,8 @@ The cards are initialized with:
    * `- turnover: double`
    * `- setTurnover(double turnover)`
    * `+ double getPreviousMonthTurnover()`
+#### Constrains / Validation
+   * Turnover cannot be negative - will throw ```InvalidTurnoverException```
 
 There are generally 3 types of Cards.
 #### [Bronze](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/entities/cards/BronzeCard.java)

@@ -112,26 +112,26 @@ Total: $1170,00
 ## Structure
 #### The structure of the software is concentrate over the shopping with discount cards
 
-### [BaseCards](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/entities/cards/BaseCard.java)
+### [BaseCards](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/entities/cards/BaseCard.java)
 The cards are initialized with:
    * `- turnover: double`
    * `- setTurnover(double turnover)`
    * `+ double getPreviousMonthTurnover()`
 
 There are generally 3 types of Cards.
-#### [Bronze](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/entities/cards/BronzeCard.java)
+#### [Bronze](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/entities/cards/BronzeCard.java)
    * `+ getDiscountRate()`
 * ```The bronze card comes with no discount rate if the turnover for the previous month is below $100. If it is between $100 and $300, the discount rate is 1%. And if it is above $300, the rate is 2.5%.```
 
-#### [Silver](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/entities/cards/SilverCard.java)
+#### [Silver](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/entities/cards/SilverCard.java)
 * `+ getDiscountRate()`
 * ```The silver card comes with an initial discount rate of 2%. In case, the turnover is over $300, the rate is 3.5%.```
 
-#### [Gold](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/entities/cards/GoldCard.java)
+#### [Gold](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/entities/cards/GoldCard.java)
 * `+ getDiscountRate()`
 * ```The gold card comes with an initial discount rate of 2%. The discount rate grows 1% for each $100 from the turnover, capping at 10%.```
 
-### [Item](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/entities/items/ItemImpl.java)
+### [Item](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/entities/items/ItemImpl.java)
 The items are initialized with:
    * `- name: String`
    * `- price: floating-point number`
@@ -140,25 +140,25 @@ The items are initialized with:
    * `+ getName()`
    * `+ getPrice`
 #### Constrains / Validation
-   * Name cannot be empty or null
-   * Price cannot be negative
+   * Name cannot be empty or null - will throw ```InvalidNameException```
+   * Price cannot be negative - will throw ```InvalidPriceException``` 
    
-### [StoreCart](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/entities/carts/StoreCart.java)
+### [StoreCart](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/entities/carts/StoreCart.java)
 The cart is initialized with:
    * `- items: List<Item>`
    * `- setItems(List<Item> items)`
    * `+ addItem(Item item)`
    * `+ getPurchaseValue()`
 #### Constrains / Validation
-   * items cannot be null or empty
+   * items cannot be null or empty - will throw ```InvalidItemsCollectionException```
    
-### [PayDesk](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/entities/payDesk/PayDesk.java)
+### [PayDesk](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/entities/payDesk/PayDesk.java)
 The payDesk is initialized with static method(s)
    * `+ pay(Cart shoppingCart, DiscountCard card)`
    * `- calculatePurchaseDiscount(double purchaseValue, double cardDiscountRate)`
    * `- calculateTotalAmount(double purchaseValue, double discount)`
    
-### [ConsoleOutputWriter](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/main/java/io/ConsoleOutputWriter.java)
+### [ConsoleOutputWriter](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/main/java/io/ConsoleOutputWriter.java)
 The ConsoleOutputWriter is initialized with:
    * `+ writeLine(String output)`
    * `+ writeLine(String format, Object... params)`
@@ -184,10 +184,10 @@ For reduces defects in the newly developed features or reduces bugs when changin
 Used Java Reflection, JUnit and Mokito. Check below, for the frameworks used versions.
 
 ### Tests
-#### [CartTest](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/test/java/interfaces/CartTest.java)
-#### [ItemTest](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/test/java/interfaces/ItemTest.java)
-#### [DiscountCardTest](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/test/java/interfaces/DiscountCardTest.java)
-#### [PayDeskTest](https://github.com/ivelin1936/Intership-Solutions/blob/master/src/test/java/entities/payDesk/PayDeskTest.java)
+#### [CartTest](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/test/java/interfaces/CartTest.java)
+#### [ItemTest](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/test/java/interfaces/ItemTest.java)
+#### [DiscountCardTest](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/test/java/interfaces/DiscountCardTest.java)
+#### [PayDeskTest](https://github.com/ivelin1936/Assignment-Backend/blob/master/src/test/java/entities/payDesk/PayDeskTest.java)
 
 ## Technologies
 
